@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: white;
+            justify-content: center;
+            display:flex;
+            align-items: center;
+            min-height: 100vh;
+            
+        }
+        .container{
+            background-color: rgb(223, 206, 235);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow:rgb(93, 168, 168);
+            width:450px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        textarea{
+            width:300px;
+            height:200px;
+        }
+        .but{
+            width:100px;
+            padding:10px
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration form</h1>
+        <form>
+            <table>
+                <tr>
+                <td>
+                        <label for="name">Name</label>
+                        &nbsp&nbsp&nbsp
+                </td>
+                <td>
+                        <input type="text" name="fname">
+                        <br>
+                        &nbsp&nbsp&nbsp
+                        FirstName
+                </td>
+           
+                <td>
+                    <input type="text" name="fname">
+                    <br>
+                    LastName
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">Contact No</label>
+                &nbsp&nbsp&nbsp
+           </td>
+            <td>
+                <input type="number" name="mob">
+                <br>
+                &nbsp&nbsp&nbsp
+                Contact No.
+            </td>
+        </tr>
+            <tr>
+            <td colspan="3">
+                Gender
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Male">Female
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label for="address">Address</label>
+                &nbsp&nbsp&nbsp
+            </td>
+            <td colspan="3"> 
+                <textarea type="text" name="address"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="State">State</label></td>
+            <td colspan="3">
+                <select>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="GA">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="GA">Goa</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                        <option value="MN">Manipur</option>
+                        <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="WB">West Bengal</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="PY">Puducherry</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="user">UserName</label>
+            </td>
+            <td colspan="2">
+                
+                <input type="text" name="user">
+                <br>
+                &nbsp&nbsp
+                UserName
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label for="pass">Password</label>
+            </td>
+            
+            <td colspan="2">
+                
+                <input type="password" name="pass">
+                <br>
+                &nbsp&nbsp
+                Password
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <center><input  class="but" type="Submit" value="Submit"></center>
+            </td>
+        </tr>
+            </table>      
+        </form>
+    </div>
+    
+</body>
+</html>
