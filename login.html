@@ -24,7 +24,7 @@ justify-content: center;
    .left {
       padding: 10px;
     }
-    input[type="text"], input[type="password"] {
+    .input {
       width: 100%;
       height: 40px;
       margin-bottom: 20px;
@@ -32,7 +32,7 @@ justify-content: center;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    input[type="submit"] {
+    button{
       width: 100%;
       height: 40px;
       background-color: #4CAF50;
@@ -41,8 +41,10 @@ justify-content: center;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: larger;
+      font-weight: bolder;
     }
-    input[type="submit"]:hover {
+    button:hover {
       background-color: #3e8e41;
     }
     .forget-password {
@@ -60,24 +62,59 @@ justify-content: center;
       align-items: center;
       margin-bottom: 20px;
     }
-    .remember-me input[type="checkbox"] {
+    .checkbox {
       margin-right: 5px;
     }
+    .error {
+  color: red;
+}
   </style>
 </head>
 <body>
   <div class="container">
     <div class="left">
       <center><h2>Login to Your Account</h2></center>
-      <input type="text" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
+      <input class="input"type="text" placeholder="Email" id="Email"required>
+      <span class="error" id="emailError"></span>
+      <input class="input"type="password" placeholder="password" id="Password" required>
+      <span class="error" id="passError"></span>
       <a href="#" class="forget-password">Forget Password?</a>
       <div class="remember-me">
-        <input type="checkbox" id="remember-me">
+        <input class="checkbox"type="checkbox" id="remember-me">
         <label for="remember-me">Remember Me</label>
       </div>
-      <input type="submit" value="Log in">
-    </div>
+      <button id="submit" type="submit">Log in</button> 
   </div>
+  <script>
+      var email=document.getElementById("Email");
+      var password=document.getElementById("Password");
+
+      submit.addEventListener("click",function(event){
+        event.preventDefault();
+
+        var emailError=document.getElementById("emailError");
+        var passwordError=document.getElementById("passError");
+
+        var emailstr = /^[a-zA-Z0-9+*%#@]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+        var passwordstr = /^[a-zA-Z0-9!@#$%^&*]{6,12}$/;
+
+        if(emailstr.test(email.value)){
+              emailError.innerHTML="";
+            }else{
+              emailError.innerHTML="*Invalid";
+            }
+
+        if(passwordstr.test(password.value)){
+            passwordError.innerHTML="";
+            }else{
+              passwordError.innerHTML="*Invalid";
+            }    
+
+        if(emailError.innerHTML===""&&passwordError.innerHTML==="")
+        {
+          alert("Login Successfully")
+        }
+      });
+  </script>
 </body>
 </html>
